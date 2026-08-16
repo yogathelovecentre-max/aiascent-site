@@ -132,3 +132,16 @@ The site headline is the tone reference: "From name to working product."
 
 If a value is missing here, ask rather than filling the gap. Anything marked
 PROPOSED above is unconfirmed and should be checked against the live site.
+
+---
+
+## ADDED RULES
+
+- Saturation lives in marks and illustrations, not in interface chrome. The
+  vibrant violet belongs in the mark, a link, a single emphasis — not in
+  headers, nav bars, banners or backgrounds. Chrome stays quiet so the one
+  saturated moment on the page reads as a moment.
+
+- Display headings are LIGHT, never bold. Large type at a light weight reads
+  calm and considered; the same size in bold reads loud. Do not bold headings
+  for emphasis — make it bigger or give it more space instead.
