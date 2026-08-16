@@ -10,8 +10,8 @@ checking who has replied, or reporting on progress.
 4. Never rewrite past log lines. Append only.
 
 ## RUNNING COUNT
-Sent: 0
-Replies: 0
+Sent: 0    (aiascent 0, biokind 0)
+Replies: 0 (aiascent 0, biokind 0)
 Target: 50 sends before measuring conversion rate
 
 ## FILES
