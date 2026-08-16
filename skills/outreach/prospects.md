@@ -1,7 +1,10 @@
 # Prospects
 
-Format: name | company | email | why them | status
+Covers both products. One list, one motion.
 
-Status values: not-sent / sent YYYY-MM-DD / replied / no
+Format: name | company | email | product | why them | status
+
+product: aiascent / biokind
+status: not-sent / sent YYYY-MM-DD / replied / no
 
 ---
