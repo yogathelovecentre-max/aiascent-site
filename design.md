@@ -28,8 +28,14 @@ Primary violets (from the Fibonacci dot mark):
 - Mid violet    #534AB7   links, active states, primary buttons
 - Light violet  #7F77DD   secondary accents, hover states, small marks
 
+Pastel:
+- Pale lilac    #EFEDFB   soft button fills, quiet blocks behind text,
+                          anywhere a surface should be gentle rather than loud
+
 Surface and text:
-- Background    #FFFFFF   default surface, everywhere
+- Background    #FDFDFC   off-white, very slightly warm. Never pure #FFFFFF —
+                          pure white is harsh over long reading and the whole
+                          point here is that reading is easy
 - Body text     #1A1826   near-black with a violet cast, never pure #000
 - Muted text    #6B6880   captions, labels, secondary lines
 - Hairline      #E8E6F0   borders, rules, table lines
@@ -39,7 +45,10 @@ sit with the brand rather than fighting it. Replace with the real values from
 aiascent.ai if they differ.)
 
 Rules:
-- White background is the default. Do not invent alternative surfaces.
+- Off-white is the default surface. Pale lilac is the only alternative.
+  Do not invent others.
+- Vibrant violet goes in small deliberate places — the mark, a link, a single
+  emphasis. Large surfaces take the pastel. Saturation is earned, not spread.
 - One accent violet per screen or slide. Not all three at once.
 - Colour carries meaning, not decoration. If it is not marking hierarchy or
   state, it should not be coloured.
@@ -80,7 +89,8 @@ Rules that matter more than the faces:
 
 ## COMPONENTS
 
-- Buttons: solid mid violet with white text, or violet outline on white.
+- Buttons: pale lilac fill with deep violet text for the gentle default, or
+  solid mid violet with off-white text where a page needs one strong action.
   Modest corner radius. No shadow.
 - Cards: defined by whitespace and a hairline border, not by shadow or fill.
 - Links: mid violet, underlined on hover.
