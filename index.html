@@ -18,6 +18,7 @@
 <style>
 :root{
   --wall:#E7E8E2;
+  --cream:#FAF7F0;
   --paper:#FBFBF8;
   --ink:#16181A;
   --muted:#393A35;
@@ -32,7 +33,7 @@
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
 body{
-  margin:0;background:var(--wall);color:var(--ink);
+  margin:0;background:var(--cream);color:var(--ink);
   font-family:var(--body);font-size:19px;line-height:1.6;
   -webkit-font-smoothing:antialiased;
 }
@@ -40,7 +41,7 @@ body{
 a{color:inherit}
 :focus-visible{outline:2px solid var(--signal);outline-offset:3px}
 
-header{padding:132px 0 0}
+header{padding:132px 0 0;max-width:620px;margin:0 auto}
 .logo{width:445px;max-width:75vw;height:auto;display:block;margin:0 0 24px}
 h1{
   font-family:var(--display);font-weight:600;color:var(--heading);
@@ -48,7 +49,7 @@ h1{
   letter-spacing:-.015em;margin:0 0 20px;max-width:15ch;
 }
 h1 em{font-style:italic;color:var(--signal)}
-.lede{font-size:19px;font-weight:500;color:var(--muted);max-width:52ch;margin:0 0 8px}
+.lede{font-family:var(--display);font-size:19px;font-weight:500;line-height:1.8;color:var(--muted);max-width:52ch;margin:0 0 8px}
 
 .hero-cta{
   display:inline-flex;align-items:center;justify-content:center;
