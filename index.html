@@ -60,6 +60,33 @@ h1 em{font-style:italic;color:var(--signal)}
 }
 .hero-cta:hover{background:var(--heading)}
 
+.hero-grid{display:grid;grid-template-columns:1fr auto;column-gap:32px;align-items:start}
+.lede{grid-column:1;grid-row:1}
+.hero-cta{grid-column:1;grid-row:2;justify-self:start}
+.about-link{
+  grid-column:2;grid-row:1 / span 2;justify-self:end;align-self:start;
+  display:block;width:136px;height:136px;
+  text-decoration:none;
+}
+.about-circle{
+  width:136px;height:136px;flex-shrink:0;box-sizing:border-box;pointer-events:none;
+  background:#DAD8E8;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--body);font-weight:500;font-size:20px;color:#26215C;
+  transition:background .2s ease,color .2s ease,transform .2s ease;
+}
+.about-link:hover .about-circle,.about-link:focus-visible .about-circle{
+  background:var(--signal);color:#fff;transform:scale(1.06);
+}
+
+@media (max-width:720px){
+  .hero-grid{grid-template-columns:1fr auto;column-gap:16px;row-gap:26px}
+  .lede{grid-column:1 / span 2;grid-row:1}
+  .hero-cta{grid-column:1;grid-row:2;margin-top:0;align-self:center}
+  .about-link{grid-column:2;grid-row:2;justify-self:start;align-self:center;width:92px;height:92px}
+  .about-circle{width:92px;height:92px;font-size:15px}
+}
+
 .count{
   display:flex;gap:28px;flex-wrap:wrap;
   border-top:1px solid var(--hair);margin-top:32px;padding-top:16px;
@@ -165,6 +192,9 @@ h2{
   <div class="hero-grid">
     <p class="lede">Pick a name or bring your own. Fixed scope, fixed price, live in weeks.</p>
     <a class="hero-cta" href="/start">Start a project</a>
+    <a class="about-link" href="/about" aria-label="About Olga">
+      <span class="about-circle">About</span>
+    </a>
   </div>
   <div class="count">
     <span id="stat-count">— names · — working demos · every one live right now</span>
