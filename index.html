@@ -3,34 +3,37 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Names for sale — aiascent</title>
+<title>AIAscent — From name to working product.</title>
+<link rel="icon" type="image/svg+xml" href="/mark.svg">
 <meta name="description" content="A collection of .ai domain names, available on their own or built into a working site.">
-<meta property="og:title" content="Names, waiting for something to become">
-<meta property="og:description" content="A collection of .ai domains. Buy the name on its own, or have the site built and live on it this week.">
+<meta property="og:title" content="From name to working product.">
+<meta property="og:description" content="Pick a name, or bring your own. I build it into something that works — fixed scope, fixed price, live in weeks.">
 <meta property="og:image" content="https://aiascent.ai/aiascent-share.png">
 <meta property="og:url" content="https://aiascent.ai">
 <meta property="og:type" content="website">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:opsz,wght@6..96,400;6..96,500&family=Archivo:wght@400;500&family=JetBrains+Mono:wght@400&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Archivo:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --wall:#E7E8E2;
   --paper:#FBFBF8;
   --ink:#16181A;
-  --muted:#6E7169;
+  --muted:#393A35;
   --hair:#CFD1C9;
-  --signal:#2F3AA8;
+  --signal:#7F77DD;
+  --heading:#26215C;
   --plinth:#DCE3DB;
-  --display:"Bodoni Moda",Georgia,serif;
+  --display:"Fraunces",Georgia,serif;
   --body:"Archivo",system-ui,-apple-system,sans-serif;
   --mono:"JetBrains Mono",ui-monospace,monospace;
 }
 *{box-sizing:border-box}
+html{scroll-behavior:smooth}
 body{
   margin:0;background:var(--wall);color:var(--ink);
-  font-family:var(--body);font-size:16px;line-height:1.6;
+  font-family:var(--body);font-size:17px;line-height:1.6;
   -webkit-font-smoothing:antialiased;
 }
 .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
@@ -38,24 +41,55 @@ a{color:inherit}
 :focus-visible{outline:2px solid var(--signal);outline-offset:3px}
 
 header{padding:64px 0 0}
-.eyebrow{
-  font-family:var(--mono);font-size:12px;letter-spacing:.14em;
-  text-transform:uppercase;color:var(--muted);margin:0 0 24px;
-}
+.logo{width:445px;max-width:75vw;height:auto;display:block;margin:0 0 24px}
 h1{
-  font-family:var(--display);font-weight:400;
+  font-family:var(--display);font-weight:600;color:var(--heading);
   font-size:clamp(38px,6.2vw,72px);line-height:1.04;
   letter-spacing:-.015em;margin:0 0 20px;max-width:15ch;
 }
 h1 em{font-style:italic;color:var(--signal)}
-.lede{font-size:17px;color:var(--muted);max-width:52ch;margin:0 0 8px}
+.lede{font-size:17px;font-weight:500;color:var(--muted);max-width:52ch;margin:0 0 8px}
+
+.hero-cta{
+  display:inline-flex;align-items:center;justify-content:center;
+  margin-top:26px;padding:14px 32px;min-height:48px;box-sizing:border-box;
+  background:var(--signal);color:#fff;
+  font-family:var(--body);font-weight:500;font-size:17px;
+  text-decoration:none;border:none;cursor:pointer;
+  transition:background .2s ease;
+}
+.hero-cta:hover{background:var(--heading)}
+
+.hero-grid{display:grid;grid-template-columns:1fr auto;column-gap:32px;align-items:start}
+.lede{grid-column:1;grid-row:1}
+.hero-cta{grid-column:1;grid-row:2;justify-self:start}
+.about-link{
+  grid-column:2;grid-row:1 / span 2;justify-self:end;align-self:start;
+  display:block;width:96px;height:96px;
+  text-decoration:none;
+}
+.about-circle{
+  width:96px;height:96px;flex-shrink:0;box-sizing:border-box;pointer-events:none;
+  background:#DAD8E8;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;
+  font-family:var(--body);font-weight:500;font-size:18px;color:#26215C;
+  transition:transform .2s ease;
+}
+.about-link:hover .about-circle{transform:scale(1.06)}
+
+@media (max-width:720px){
+  .hero-grid{grid-template-columns:1fr auto;column-gap:16px;row-gap:26px}
+  .lede{grid-column:1 / span 2;grid-row:1}
+  .hero-cta{grid-column:1;grid-row:2;margin-top:0;align-self:center}
+  .about-link{grid-column:2;grid-row:2;justify-self:start;align-self:center;width:64px;height:64px}
+  .about-circle{width:64px;height:64px;font-size:13px}
+}
 
 .count{
   display:flex;gap:28px;flex-wrap:wrap;
-  border-top:1px solid var(--hair);margin-top:44px;padding-top:16px;
-  font-family:var(--mono);font-size:12px;letter-spacing:.06em;color:var(--muted);
+  border-top:1px solid var(--hair);margin-top:32px;padding-top:16px;
+  font-family:var(--mono);font-size:15px;letter-spacing:.06em;color:var(--muted);
 }
-
 .grid{
   display:grid;grid-template-columns:repeat(auto-fill,minmax(236px,1fr));
   gap:20px;padding:44px 0 8px;
@@ -67,69 +101,61 @@ h1 em{font-style:italic;color:var(--signal)}
   transition:transform .25s ease,border-color .25s ease;
 }
 .piece:hover,.piece:focus-visible{transform:translateY(-4px);border-color:var(--ink)}
-.frame{
-  padding:44px 18px 40px;display:flex;align-items:center;
-  justify-content:center;min-height:172px;
-}
-.name{
-  font-family:var(--display);font-weight:400;
-  font-size:clamp(27px,3.1vw,36px);letter-spacing:-.01em;
-  line-height:1.15;word-break:break-word;text-align:center;
-}
-.name span{color:var(--signal)}
 .holder{display:flex;flex-direction:column}
-.demo{display:block;background:var(--paper);border:1px solid var(--hair);border-top:0;padding:9px 16px;font-family:var(--mono);font-size:12px;letter-spacing:.05em;color:var(--signal);text-decoration:none}
-.demo:hover{background:var(--plinth)}
-.demo b{font-weight:400;color:var(--muted)}
+.demo{display:block;background:var(--paper);border:1px solid var(--hair);border-top:0;padding:14px 16px;font-family:var(--mono);font-weight:400;font-size:15px;letter-spacing:.03em;color:var(--muted);text-decoration:none}
+.demo:hover{background:var(--plinth);color:var(--ink)}
+.preview{display:block;text-decoration:none;color:inherit}
 .livewrap{position:relative;height:230px;overflow:hidden;background:var(--paper);border-bottom:1px solid var(--hair)}
 .livewrap iframe{width:1200px;height:1560px;border:0;transform:scale(.215);transform-origin:0 0;pointer-events:none}
-.nameplate{position:absolute;left:0;right:0;bottom:0;background:var(--paper);border-top:1px solid var(--hair);padding:12px 16px;text-align:center}
-.nameplate span{font-family:var(--display);font-size:clamp(24px,2.8vw,32px);letter-spacing:-.01em;line-height:1.1}
+.nameplate{background:var(--paper);border-bottom:1px solid var(--hair);padding:20px 16px;text-align:center}
+.nameplate span{font-family:var(--display);font-weight:500;font-size:clamp(27px,3vw,36px);letter-spacing:-.01em;line-height:1.1}
 .nameplate span i{font-style:normal;color:var(--signal)}
-.livetag{position:absolute;top:10px;right:10px;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:10px;letter-spacing:.14em;padding:4px 8px}
-.ask{display:block;width:100%;background:var(--paper);border:1px solid var(--hair);border-top:0;padding:11px;font-family:var(--mono);font-size:12px;letter-spacing:.08em;cursor:pointer;color:var(--signal)}
+.livetag{position:absolute;top:10px;right:10px;background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:15px;letter-spacing:.14em;padding:6px 10px}
+.ask{display:block;width:100%;background:var(--paper);border:1px solid var(--hair);border-top:0;padding:16px;font-family:var(--mono);font-weight:500;font-size:17px;letter-spacing:.03em;cursor:pointer;color:var(--signal)}
 .ask:hover{background:var(--ink);color:var(--paper);border-color:var(--ink)}
 .plinth{
   background:var(--plinth);border-top:1px solid var(--hair);
-  padding:14px 16px;display:flex;align-items:baseline;
-  justify-content:space-between;gap:12px;
+  padding:16px;display:flex;flex-direction:column;gap:8px;
 }
-.cat{font-size:14.5px;color:var(--text-primary,#1B1A17);line-height:1.4}
-.price{font-family:var(--mono);font-size:13px;white-space:nowrap}
+.cat{font-size:17px;color:var(--text-primary,#1B1A17);line-height:1.4}
+.price{font-family:var(--mono);font-weight:400;font-size:17px;color:var(--muted);line-height:1.3}
 
-section{padding:64px 0}
+section{padding:80px 0}
 h2{
-  font-family:var(--display);font-weight:400;
-  font-size:clamp(26px,3.4vw,38px);letter-spacing:-.01em;margin:0 0 10px;
+  font-family:var(--display);font-weight:400;color:var(--heading);
+  font-size:clamp(30px,3.8vw,44px);letter-spacing:-.01em;margin:0 0 10px;
 }
 .sub{color:var(--muted);max-width:56ch;margin:0 0 32px}
 
 .tiers{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px}
 .tier{background:var(--paper);border:1px solid var(--hair);padding:26px 22px;display:flex;flex-direction:column}
 .tier.lead{border-color:var(--signal)}
-.tier h3{font-family:var(--body);font-size:16px;font-weight:500;margin:0 0 8px}
-.tier p{font-size:14px;color:var(--muted);margin:0 0 20px;flex:1}
-.from{font-family:var(--mono);font-size:14px}
+.tier h3{font-family:var(--body);font-size:18px;font-weight:500;color:var(--heading);margin:0 0 8px}
+.tier p{font-size:17px;color:var(--muted);margin:0 0 20px;flex:1}
+.from{font-family:var(--mono);font-size:17px}
 .mark{
-  font-family:var(--mono);font-size:11px;letter-spacing:.12em;
+  font-family:var(--mono);font-size:15px;letter-spacing:.12em;
   text-transform:uppercase;color:var(--signal);margin:0 0 12px;
 }
 
 .split{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:20px;margin-bottom:36px}
 .panel{background:var(--paper);border:1px solid var(--hair);padding:26px 24px}
-.panel h3{font-family:var(--body);font-size:15px;font-weight:500;margin:0 0 16px}
+.panel h3{font-family:var(--body);font-size:18px;font-weight:500;color:var(--heading);margin:0 0 16px}
 .panel ul{list-style:none;margin:0;padding:0}
-.panel li{font-size:14.5px;padding:7px 0 7px 24px;position:relative;color:var(--ink)}
-.panel li::before{position:absolute;left:0;top:7px;font-family:var(--mono);font-size:13px}
+.panel li{font-size:17px;padding:8px 0 8px 26px;position:relative;color:var(--ink)}
+.panel li::before{position:absolute;left:0;top:8px;font-family:var(--mono);font-size:17px}
 .can li::before{content:"+";color:var(--signal)}
 .cant li{color:var(--muted)}
 .cant li::before{content:"—";color:var(--muted)}
-.panel .why{font-size:13px;color:var(--muted);margin:16px 0 0;padding-top:14px;border-top:1px solid var(--hair)}
+.panel .why{font-size:15px;color:var(--muted);margin:16px 0 0;padding-top:14px;border-top:1px solid var(--hair)}
+.panel .why.lead{border-top:0;padding-top:0;margin:0 0 16px}
 .sched{border:1px solid var(--hair);background:var(--paper);margin-bottom:36px}
 .row{display:flex;justify-content:space-between;gap:20px;padding:15px 24px;border-bottom:1px solid var(--hair);align-items:baseline;flex-wrap:wrap}
 .row:last-child{border-bottom:0}
-.row .what{font-size:15px}
-.row .when{font-family:var(--mono);font-size:13px;color:var(--signal);white-space:nowrap}
+.row .what{font-size:17px}
+.row .when{font-family:var(--mono);font-size:15px;color:var(--signal);white-space:nowrap}
+.see-example{font-family:var(--mono);font-size:14px;color:var(--signal);text-decoration:none;white-space:nowrap}
+.see-example:hover{text-decoration:underline}
 .built{margin:44px 0 8px;border-top:1px solid var(--hair);padding-top:40px}
 .built h2{margin-bottom:8px}
 .builtsub{color:var(--muted);max-width:52ch;margin:0 0 26px}
@@ -142,16 +168,16 @@ h2{
 .overlay{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:center;padding:22px}
 .open{background:var(--ink);color:var(--paper);font-family:var(--mono);font-size:13px;letter-spacing:.05em;padding:13px 24px}
 .screen:hover .open{background:var(--signal)}
-.close{border-top:1px solid var(--hair);padding:56px 0 80px}
+.close{border-top:1px solid var(--hair);padding:72px 0 80px}
 .cta{
   display:inline-block;margin-top:22px;background:var(--ink);color:var(--paper);
-  text-decoration:none;padding:15px 30px;font-size:15px;
+  text-decoration:none;padding:16px 30px;font-size:17px;
   transition:background .2s ease;
 }
 .cta:hover{background:var(--signal)}
-.note{font-size:13px;color:var(--muted);margin-top:18px;max-width:48ch}
+.note{font-size:15px;color:var(--muted);margin-top:18px;max-width:48ch}
 
-@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
@@ -159,13 +185,17 @@ h2{
 <div class="wrap">
 
 <header>
-  <p class="eyebrow">aiascent · domain collection</p>
-  <h1>Names, waiting for something to <em>become</em>.</h1>
-  <p class="lede">A collection of .ai domains. Buy the name on its own, or have the site built and live on it this week — by the person who built it.</p>
+  <img class="logo" src="/logo.svg" alt="AIAscent — AI studio">
+  <h1>From name to working product.</h1>
+  <div class="hero-grid">
+    <p class="lede">Pick a name or bring your own. Fixed scope, fixed price, live in weeks.</p>
+    <a class="hero-cta" href="/start">Start a project</a>
+    <a class="about-link" href="/about" aria-label="About Olga">
+      <span class="about-circle">me</span>
+    </a>
+  </div>
   <div class="count">
-    <span id="stat-count">— names available</span>
-    <span>Transfer within 24 hours</span>
-    <span>Built by a working developer</span>
+    <span id="stat-count">— names · — working demos · every one live right now</span>
   </div>
 </header>
 
@@ -178,6 +208,7 @@ h2{
   <div class="split">
     <div class="panel can">
       <h3>Yes, this is what I do</h3>
+      <p class="why lead">Everything on this list is running in production on something I built and maintain.</p>
       <ul>
         <li>Web apps that work as well on a phone as a laptop</li>
         <li>Python back ends with a real database behind them</li>
@@ -187,7 +218,6 @@ h2{
         <li>Accounts, sign-in, password resets</li>
         <li>Deployed on a real server, with backups that are tested</li>
       </ul>
-      <p class="why">Everything on this list is running in production on something I built and maintain.</p>
     </div>
 
     <div class="panel cant">
@@ -196,7 +226,7 @@ h2{
         <li>Online shops and checkout — payments deserve a specialist</li>
         <li>Native iPhone and Android apps — different craft entirely</li>
         <li>WordPress, Shopify, Wix — not my tools, you'd get worse work</li>
-        <li>Anything storing medical or financial records — regulated, and rightly so</li>
+        <li>Clinical patient records or payment data — regulated, and rightly so</li>
         <li>Round-the-clock support — one person can't promise that honestly</li>
       </ul>
       <p class="why">If your project needs one of these, say so now and I'll point you somewhere better rather than waste a fortnight of your time.</p>
@@ -217,7 +247,7 @@ h2{
         <li>One person who can make decisions — not a committee</li>
         <li>Your words, or an hour on a call so I can write them</li>
         <li>Logos and photos if you have them; I'll make something simple if not</li>
-        <li>Logins for anything of yours I need to connect to</li>
+        <li>Access to anything I need to connect to — a collaborator account, never your password</li>
         <li>Feedback within three working days, or the dates move</li>
         <li>Half up front, half when it goes live</li>
       </ul>
@@ -231,7 +261,7 @@ h2{
       <span class="from">Listed price</span>
     </div>
     <div class="tier lead">
-      <p class="mark">Most take this</p>
+      <p class="mark">Best place to start</p>
       <h3>Name plus a landing page</h3>
       <p>The domain, plus one page: a hero, up to four sections, a contact form that reaches your inbox, mobile layout, and a simple logo. Live within five working days. One round of changes.</p>
       <span class="from">From £900</span>
@@ -243,11 +273,15 @@ h2{
     </div>
   </div>
 
-  <div class="sched" style="margin-top:20px">
-    <div class="row"><span class="what"><strong style="font-weight:500">Everything is fixed before we start.</strong> I write down exactly what I'm building, you agree it, and that document is the job. Neither of us can quietly change it afterwards.</span></div>
-    <div class="row"><span class="what">Want something added mid-build? Good — I'll price it and tell you the new date. It's a yes with a number attached, never a no.</span></div>
-    <div class="row"><span class="what">Changes means adjusting what we agreed. A new page, a new feature, or a redesign is new work, quoted separately.</span></div>
+  <h2 style="margin-top:44px">How this works</h2>
+  <div class="sched">
+    <div class="row"><span class="what"><strong style="font-weight:500">You'll know exactly what you're getting before you pay anything.</strong> I write down every feature, screen and rule — and what's not included. You agree it. That document is what "finished" means. <a class="see-example" href="/example-scope">See an example →</a></span></div>
+    <div class="row"><span class="what"><strong style="font-weight:500">50% to start, 50% on delivery.</strong> For anything over six weeks, it's split across milestones you can see, so you're never far ahead of the work.</span></div>
+    <div class="row"><span class="what"><strong style="font-weight:500">Want something added halfway through? Good.</strong> I'll price it and tell you the new date. Always a yes with a number attached, never a no.</span></div>
+    <div class="row"><span class="what"><strong style="font-weight:500">You'll never get an invoice you weren't expecting.</strong> Adjusting what we agreed is included. A new feature is new work, and you'll see the cost before I start.</span></div>
+    <div class="row"><span class="what"><strong style="font-weight:500">It's yours at the end.</strong> Code, designs and accounts all transfer to you on final payment. No lock-in.</span></div>
   </div>
+  <p class="note">Full terms at aiascent.ai/terms</p>
 </section>
 
 <div class="close">
@@ -263,67 +297,56 @@ h2{
 const CONTACT = "aiascent.studio@gmail.com";
 
 const DOMAINS = [
-  { name: "sunsolar.ai",     category: "The solar company people actually trust",      price: "£1,200" , demo: "/demo/sunsolar.html" },
+  { name: "sunsolar.ai",     category: "The solar company people actually trust",      price: "£1,500" , demo: "/demo/sunsolar.html" },
   { name: "bibe.ai",         category: "Four letters. Heard once, remembered",      price: "£1,100" , demo: "/demo/bibe.html" },
-  { name: "thinkco.ai",      category: "Sounds established on day one",   price: "£950" , demo: "/demo/thinkco.html" },
+  { name: "thinkco.ai",      category: "Sounds established on day one",   price: "£1,500" , demo: "/demo/thinkco.html" },
   { name: "hoxa.ai",         category: "Short, sharp, and nobody owns it",      price: "£950" , demo: "/demo/hoxa.html" },
   { name: "nyvo.ai",         category: "A name for something that doesn't exist yet",      price: "£950" , demo: "/demo/nyvo.html" },
   { name: "waxe.ai",         category: "Beauty tech that doesn't sound clinical", price: "£900" , demo: "/demo/waxe.html" },
-  { name: "truebio.ai",      category: "Proof of what's actually in it",   price: "£900" , demo: "/demo/truebio.html" },
+  { name: "truebio.ai",      category: "Proof of what's actually in it",   price: "£1,500" , demo: "/demo/truebio.html" },
   { name: "vaxin.ai",        category: "Life science, said in five letters",      price: "£850" , demo: "/demo/vaxin.html" },
   { name: "bawi.ai",         category: "Four letters looking for a founder",      price: "£850" , demo: "/demo/bawi.html" },
   { name: "golx.ai",         category: "Reads like it already raised",      price: "£850" , demo: "/demo/golx.html" },
-  { name: "mentalgym.ai",    category: "Training for the mind, said plainly", price: "£850" , demo: "/demo/mentalgym.html" },
+  { name: "mentalgym.ai",    category: "Training for the mind, said plainly", price: "£1,500" , demo: "/demo/mentalgym.html" },
   { name: "gult.ai",         category: "Blunt, short, easy to own",      price: "£800" , demo: "/demo/gult.html" },
   { name: "zezt.ai",         category: "Fast to say, hard to forget",      price: "£800" , demo: "/demo/zezt.html" },
   { name: "clokk.ai",        category: "For anything that runs to a deadline",   price: "£800" , demo: "/demo/clokk.html" },
-  { name: "vitaform.ai",     category: "Health data that finally makes sense",       price: "£800" , demo: "/demo/vitaform.html" },
   { name: "enoxx.ai",        category: "Sounds like a Series A already",      price: "£750" , demo: "/demo/enoxx.html" },
   { name: "twito.ai",        category: "Playful, short, ready for a logo",      price: "£750" , demo: "/demo/twito.html" },
-  { name: "gymway.ai",       category: "The route to actually going",            price: "£750" , demo: "/demo/gymway.html" },
-  { name: "vitabalance.ai",  category: "Supplements that know what you take",       price: "£750" , demo: "/demo/vitabalance.html" },
+  { name: "gymway.ai",       category: "The route to actually going",            price: "£1,500" , demo: "/demo/gymway.html" },
   { name: "driftaway.ai",    category: "Travel planning that isn't a spreadsheet",              price: "£700" , demo: "/demo/driftaway.html" },
   { name: "drivecar.ai",     category: "Cars bought without the forecourt",         price: "£700" , demo: "/demo/drivecar.html" },
   { name: "chainenergy.ai",  category: "Where power meets supply chain",         price: "£700" , demo: "/demo/chainenergy.html" },
   { name: "oglabs.ai",       category: "A research lab that ships things",     price: "£700" , demo: "/demo/oglabs.html" },
   { name: "femmi.ai",        category: "Women's health, taken seriously",    price: "£700" , demo: "/demo/femmi.html" },
   { name: "biomix.ai",       category: "Formulation, made legible", price: "£700" , demo: "/demo/biomix.html" },
-  { name: "bioroot.ai",      category: "Botanicals, traced to source", price: "£700" , demo: "/demo/bioroot.html" },
   { name: "earthnest.ai",    category: "Proof of where it came from",   price: "£650" , demo: "/demo/earthnest.html" },
   { name: "soulspirit.ai",   category: "For practitioners with a waiting list",          price: "£650" , demo: "/demo/soulspirit.html" },
   { name: "thesenses.ai",    category: "Wellbeing you can actually feel",           price: "£600" , demo: "/demo/thesenses.html" },
   { name: "godream.ai",      category: "Sleep, or ambition. Your call",   price: "£600" , demo: "/demo/godream.html" },
   { name: "bondme.ai",       category: "Matching people who should meet",          price: "£600" , demo: "/demo/bondme.html" },
   { name: "sloair.com",      category: "Short, airy, and a .com",       price: "£600" , demo: "/demo/sloair.html" },
-  { name: "aiattack.ai",     category: "Security testing that sounds like it means it",             price: "£600" , demo: "/demo/aiattack.html" },
-  { name: "dingme.ai",       category: "Alerts people don't switch off",        price: "£550" , demo: "/demo/dingme.html" },
-  { name: "iattack.ai",      category: "The natural pair to aiattack.ai",             price: "£550" , demo: "/demo/iattack.html" },
-  { name: "biokind.ai",      category: "Reads any label. Built and running", price: "—" },
-  { name: "aiascent.ai",     category: "This page. Not going anywhere",     price: "—" }
+  { name: "dingme.ai",       category: "Alerts people don't switch off",        price: "£550" , demo: "/demo/dingme.html" }
 ];
 
 const grid = document.getElementById("grid");
-const forSale = DOMAINS.filter(d => d.price !== "—");
 
-document.getElementById("stat-count").textContent = forSale.length + " names available";
+document.getElementById("stat-count").textContent =
+  `${DOMAINS.length} names · ${DOMAINS.length} working demos · every one live right now`;
 
 grid.innerHTML = DOMAINS.map(d => {
   const dot = d.name.lastIndexOf(".");
   const stem = d.name.slice(0, dot);
   const tld = d.name.slice(dot);
-  const art = d.demo
-    ? `<div class="livewrap"><iframe src="${d.demo}" title="Live preview of ${d.name}" loading="lazy" scrolling="no"></iframe><span class="livetag">LIVE</span><div class="nameplate"><span>${stem}<i>${tld}</i></span></div></div>`
-    : d.image
-    ? `<img src="${d.image}" alt="${d.name}" style="width:100%;height:auto;aspect-ratio:1200/630;object-fit:cover;display:block">`
-    : `<div class="frame"><span class="name">${stem}<span>${tld}</span></span></div>`;
-  const demo = d.demo
-    ? `<a class="demo" href="${d.demo}">OPEN THE LIVE SITE &rarr; <b>built on this name, in a day</b></a>`
-    : "";
-  const ask = d.price === "—" ? "" : `<button class="ask" data-name="${d.name}">ENQUIRE ABOUT ${d.name.toUpperCase()}</button>`;
+  const preview = `<a class="preview" href="${d.demo}" aria-label="Open the live site for ${d.name}">
+      <div class="livewrap"><iframe src="${d.demo}" title="Live preview of ${d.name}" loading="lazy" scrolling="no"></iframe><span class="livetag">LIVE</span></div>
+    </a>`;
+  const nameplate = `<div class="nameplate"><span>${stem}<i>${tld}</i></span></div>`;
   return `<div class="holder"><div class="piece">
-      ${art}
+      ${preview}
+      ${nameplate}
       <div class="plinth"><span class="cat">${d.category}</span><span class="price">${d.price}</span></div>
-    </div>${demo}${ask}</div>`;
+    </div><a class="demo" href="${d.demo}">Open the live site</a><button class="ask" data-name="${d.name}">Enquire about ${d.name}</button></div>`;
 }).join("");
 
 function enquire(name) {
