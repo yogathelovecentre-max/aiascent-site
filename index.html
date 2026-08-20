@@ -14,7 +14,7 @@
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Archivo:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Archivo:wght@400;500&family=IBM+Plex+Sans:wght@400;500&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
 <style>
 :root{
   --wall:#E7E8E2;
@@ -31,15 +31,33 @@
   --mono:"JetBrains Mono",ui-monospace,monospace;
 }
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
+html{scroll-behavior:smooth;overflow-x:hidden}
 body{
   margin:0;background:var(--cream);color:var(--ink);
   font-family:var(--body);font-size:19px;line-height:1.6;
   -webkit-font-smoothing:antialiased;
+  overflow-x:hidden;
 }
 .wrap{max-width:1060px;margin:0 auto;padding:0 24px}
 a{color:inherit}
 :focus-visible{outline:2px solid var(--signal);outline-offset:3px}
+
+.topnav{
+  display:flex;align-items:center;justify-content:space-between;
+  flex-wrap:wrap;gap:24px;
+  padding:40px 0 0;
+}
+.topnav .nav-logo{width:160px;height:auto;display:block}
+.topnav nav{display:flex;gap:40px;flex-wrap:wrap}
+.topnav nav a{
+  font-family:"IBM Plex Sans",var(--body);font-size:15px;letter-spacing:.02em;
+  color:var(--heading);text-decoration:none;
+}
+.topnav nav a:hover{color:var(--signal)}
+@media (max-width:600px){
+  .topnav{flex-direction:column;align-items:flex-start;gap:18px}
+  .topnav nav{gap:24px}
+}
 
 header{padding:132px 0 0;max-width:620px;margin:0 auto}
 .logo{width:445px;max-width:75vw;height:auto;display:block;margin:0 0 24px}
@@ -71,13 +89,13 @@ h1 em{font-style:italic;color:var(--signal)}
 }
 .about-circle{
   width:136px;height:136px;flex-shrink:0;box-sizing:border-box;pointer-events:none;
-  background:#DAD8E8;border-radius:50%;
+  background:#534AB7;border-radius:50%;
   display:flex;align-items:center;justify-content:center;
-  font-family:var(--body);font-weight:500;font-size:20px;color:#26215C;
+  font-family:"IBM Plex Sans",var(--body);font-weight:500;font-size:15px;letter-spacing:.02em;color:#fff;
   transition:background .2s ease,color .2s ease,transform .2s ease;
 }
 .about-link:hover .about-circle,.about-link:focus-visible .about-circle{
-  background:var(--signal);color:#fff;transform:scale(1.06);
+  background:var(--heading);color:#fff;transform:scale(1.06);
 }
 
 @media (max-width:720px){
@@ -86,6 +104,26 @@ h1 em{font-style:italic;color:var(--signal)}
   .hero-cta{grid-column:1;grid-row:2;margin-top:0;align-self:center}
   .about-link{grid-column:2;grid-row:2;justify-self:start;align-self:center;width:92px;height:92px}
   .about-circle{width:92px;height:92px;font-size:15px}
+}
+
+.hero-row{display:flex;gap:40px;align-items:flex-start}
+.hero-demo{flex:1;min-width:0;overflow:visible}
+.hero-image-wrap{position:relative;width:150%}
+.hero-image{
+  width:100%;height:auto;display:block;
+  mask-image:
+    linear-gradient(to right, transparent 0%, black 16%),
+    linear-gradient(to top, transparent 0%, black 16%);
+  mask-composite:intersect;
+  -webkit-mask-image:
+    linear-gradient(to right, transparent 0%, black 16%),
+    linear-gradient(to top, transparent 0%, black 16%);
+  -webkit-mask-composite:source-in;
+}
+@media (max-width:1150px){
+  .hero-row{flex-direction:column}
+  .hero-demo{width:100%;max-width:620px}
+  .hero-image-wrap{width:100%}
 }
 
 .count{
@@ -97,6 +135,7 @@ h1 em{font-style:italic;color:var(--signal)}
   display:grid;grid-template-columns:repeat(auto-fill,minmax(380px,1fr));
   gap:20px;padding:100px 0 8px;
 }
+@media (max-width:720px){.grid{grid-template-columns:1fr}}
 .piece{
   background:var(--paper);border:1px solid var(--hair);
   display:flex;flex-direction:column;text-align:left;
@@ -187,6 +226,16 @@ h2{
 
 <div class="wrap">
 
+<div class="topnav">
+  <img class="nav-logo" src="/logo.svg" alt="AIAscent — AI studio">
+  <nav>
+    <a href="#work">Work</a>
+    <a href="#grid">Domains</a>
+    <a href="/about">About</a>
+  </nav>
+</div>
+
+<div class="hero-row">
 <header>
   <img class="logo" src="/logo.svg" alt="AIAscent — AI studio">
   <h1>From name to working product.</h1>
@@ -201,10 +250,16 @@ h2{
     <span id="stat-count">— names · — working demos · every one live right now</span>
   </div>
 </header>
+<div class="hero-demo">
+  <div class="hero-image-wrap">
+    <img class="hero-image" src="/hero.png" alt="Watercolour painting of a network of circuits and connected nodes on canvas">
+  </div>
+</div>
+</div>
 
 <div class="grid" id="grid"></div>
 
-<section>
+<section id="work">
   <h2>What I build</h2>
   <p class="sub">I'm one person, and I build a narrow set of things properly rather than everything badly. Two of my own products are live and you can go and use them — that's the standard, and it's the honest way to judge me before you commit.</p>
 
